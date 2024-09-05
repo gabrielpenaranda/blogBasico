@@ -1,4 +1,4 @@
-@extends('dashboard.master')
+@extends('layouts.app')
 
 @section('title')
     Post|Show
@@ -13,6 +13,7 @@
     @if ($post->image)
         <img src="/uploads/post/{{ $post->image }}" width="250px">
     @else
-        <span>No image</span>
+        <span class="mt-2">No image</span>
     @endif
 @endsection
+

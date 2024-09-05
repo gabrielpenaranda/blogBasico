@@ -1,4 +1,4 @@
-@extends('dashboard.master')
+@extends('layouts.app')
 
 @section('title')
     Category|Show
@@ -8,3 +8,4 @@
     <h1><span>Title: {{ $category->title }}</span></h1>
     <span>Slug: {{ $category->slug }}</span> <br>
 @endsection
+

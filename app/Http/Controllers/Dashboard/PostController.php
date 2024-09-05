@@ -48,7 +48,7 @@ class PostController extends Controller
     {
                
         Post::create($request->validated());
-        return redirect(route('post.index'));
+        return redirect(route('post.index'))->with('status', 'Post created');
     }
 
     /**
@@ -79,7 +79,7 @@ class PostController extends Controller
         $data_image = $this->post_services->uploadImage($data, $image);
         
         $post->update($data_image);
-        return to_route('post.index');
+        return to_route('post.index')->with('status', 'Post updated');
     }
 
     /**
@@ -88,6 +88,6 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
-        return to_route('post.index');
+        return to_route('post.index')->with('status', 'Post deleted');
     }
 }

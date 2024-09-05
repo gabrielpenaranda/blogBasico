@@ -1,4 +1,4 @@
-@extends('dashboard.master')
+@extends('layouts.app')
 
 @section('title')
     Category|Create
@@ -14,6 +14,7 @@
 
         @include('dashboard.category._form', ['task' => 'edit'])
 
-        <button type="submit">Send</button>
+        <button type="submit" class="btn btn-success mt-2">Send</button>
     </form>
 @endsection
+

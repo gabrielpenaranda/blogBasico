@@ -1,4 +1,4 @@
-@extends('dashboard.master')
+@extends('layouts.app')
 
 @section('title')
     Post|Create
@@ -13,6 +13,7 @@
 
         @include('dashboard.post._form')
 
-        <button type="submit">Send</button>
+        <button type="submit" class="btn btn-success mt-2">Send</button>
     </form>
 @endsection
+

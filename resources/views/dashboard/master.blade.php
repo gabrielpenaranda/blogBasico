@@ -6,6 +6,14 @@
     <title>@yield('title')</title>
 </head>
 <body>
+    {{-- @if (session('status'))
+        {{ session('status') }} <br>
+    @endif --}}
+    
+    @session('status')
+        {{ $value }}
+    @endsession
+
     @yield('content')
 </body>
 </html>
